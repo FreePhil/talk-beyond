@@ -23,8 +23,8 @@ create table minion
     color          bigint,
     evil_master    bigint,
     description    varchar(4000),
-    constraint FK_minion_color foreign key (color) references color,
-    constraint FK_minion_person foreign key (evil_master) references person
+    constraint FK_minion_color foreign key (color) references color(id),
+    constraint FK_minion_person foreign key (evil_master) references person(id)
 );
 
 create table string_id_minion
